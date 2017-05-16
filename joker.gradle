@@ -43,11 +43,19 @@ def limitHistory(File dir) {
             }
         }
     })
-    if (listDir.size() > save_history_max_num) {
+    if (listDir.size() > getHistoryNum()) {
         for (int i = listDir.size() - 11; i > -1; i--) {
             def delFile = listDir.get(i)
             deleteDir(delFile, true)
         }
+    }
+}
+
+def getHistoryNum() {
+    try {
+        return save_history_max_num
+    } catch (Exception e) {
+        return 10
     }
 }
 
@@ -62,14 +70,14 @@ def removeModuleAar(variant, String path) {
 
 def runAppRelease(Project project, String startTag, app_variant) {
     if (!app_variant.versionName.contains('beta')) {
-        def saveDir = file("${getHistoryPath()}/${app_variant.versionName}")
+        def saveDir = file("$history_path/${app_variant.versionName}")
         app_variant.outputs.each { output ->
             def newName = "$startTag-${app_variant.flavorName}-${app_variant.versionName}-${app_variant.versionCode}.apk"
             output.outputFile = new File(saveDir, newName)
         }
         if (app_variant.getBuildType().isMinifyEnabled()) {
             app_variant.assemble.doLast {
-                limitHistory(file(getHistoryPath()))
+                limitHistory(file(history_path))
                 saveRunProperties(saveDir.path)
                 saveRunConfig(project, "${saveDir.path}/config")
                 app_variant.getProductFlavors().each { flavor ->
@@ -84,7 +92,7 @@ def runAppRelease(Project project, String startTag, app_variant) {
                                 }
                             }
                             copy {
-                                from "${getHistoryLibPath()}"
+                                from "${history_lib_save}"
                                 into "${saveDir.path}/config"
                             }
                         } catch (Exception e) {
@@ -94,26 +102,11 @@ def runAppRelease(Project project, String startTag, app_variant) {
                 }
             }
         }
-    }else{
+    } else {
         app_variant.outputs.each { output ->
             def newName = "$startTag-${app_variant.flavorName}-${app_variant.versionName}-${app_variant.versionCode}.apk"
             output.outputFile = new File(output.outputFile.parent, newName)
         }
-    }
-}
-
-def getHistoryPath(){
-    try{
-       return history_path
-    }catch (Exception e){
-        return "$rootDir/history"
-    }
-}
-def getHistoryLibPath(){
-    try{
-       return history_lib_save
-    }catch (Exception e){
-        return "$rootDir/history/lib"
     }
 }
 
