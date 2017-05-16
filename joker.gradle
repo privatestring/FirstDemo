@@ -2,7 +2,7 @@ ext {
     checkVersionCode = this.&checkVersionCode
     runAppRelease = this.&runAppRelease
     removeModuleAar = this.&removeModuleAar
-    saveRunConfig = this.&saveRunConfig
+    saveLibRunConfig = this.&saveLibRunConfig
     writeFile = this.&writeFile
     deleteDir = this.&deleteDir
 
@@ -70,14 +70,14 @@ def removeModuleAar(variant, String path) {
 
 def runAppRelease(Project project, String startTag, app_variant) {
     if (!app_variant.versionName.contains('beta')) {
-        def saveDir = file("$history_path/${app_variant.versionName}")
+        def saveDir = file("${getHistoryPath()}/${app_variant.versionName}")
         app_variant.outputs.each { output ->
             def newName = "$startTag-${app_variant.flavorName}-${app_variant.versionName}-${app_variant.versionCode}.apk"
             output.outputFile = new File(saveDir, newName)
         }
         if (app_variant.getBuildType().isMinifyEnabled()) {
             app_variant.assemble.doLast {
-                limitHistory(file(history_path))
+                limitHistory(file(getHistoryPath()))
                 saveRunProperties(saveDir.path)
                 saveRunConfig(project, "${saveDir.path}/config")
                 app_variant.getProductFlavors().each { flavor ->
@@ -92,7 +92,7 @@ def runAppRelease(Project project, String startTag, app_variant) {
                                 }
                             }
                             copy {
-                                from "${history_lib_save}"
+                                from "${getHistoryPath()}/lib"
                                 into "${saveDir.path}/config"
                             }
                         } catch (Exception e) {
@@ -107,6 +107,15 @@ def runAppRelease(Project project, String startTag, app_variant) {
             def newName = "$startTag-${app_variant.flavorName}-${app_variant.versionName}-${app_variant.versionCode}.apk"
             output.outputFile = new File(output.outputFile.parent, newName)
         }
+    }
+}
+
+def getHistoryPath() {
+    try {
+        return history_path
+    } catch (Exception e) {
+        e.printStackTrace()
+        return "$rootDir/history"
     }
 }
 
@@ -128,6 +137,10 @@ def saveRunProperties(String pathDir) {
     }
     content = content.concat('\n}')
     writeFile("${pathDir}/config/app-编译环境.json", content, false)
+}
+
+def saveLibRunConfig(Project project) {
+    saveRunConfig(project, "${getHistoryPath()}/lib")
 }
 
 def saveRunConfig(Project project, String pathDir) {
