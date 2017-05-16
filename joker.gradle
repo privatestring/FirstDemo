@@ -1,0 +1,247 @@
+ext {
+    checkVersionCode = this.&checkVersionCode
+    runAppRelease = this.&runAppRelease
+    removeModuleAar = this.&removeModuleAar
+    saveRunConfig = this.&saveRunConfig
+    writeFile = this.&writeFile
+    deleteDir = this.&deleteDir
+
+}
+
+def checkVersionCode(String path, String version, int code) {
+    def dataList = readVersion(path)
+    if (!dataList.containsKey(version)) {
+        int len = version.length()
+        for (int i = 0; i < 20 - len; i++) {
+            version = version.concat(" ")
+        }
+        writeFile(path, "\n$version=          $code                             ${System.properties['user.name']}", true)
+    }
+}
+
+def limitHistory(File dir) {
+    def ss = dir.listFiles();
+    def listDir = new ArrayList<File>();
+    for (File child : ss)
+        if (child.isDirectory() && !child.name.equalsIgnoreCase('lib'))
+            listDir.add(child);
+    Collections.sort(listDir, new Comparator<File>() {
+        @Override
+        int compare(File next, File before) {
+            String[] ver1 = before.name.split('.')
+            String[] ver2 = next.name.split('.')
+            try {
+                for (int i = 0; i < Math.min(ver1.size(), ver2.size()); i++) {
+                    def v1 = Integer.parseInt(ver1[i])
+                    def v2 = Integer.parseInt(ver2[i])
+                    if (v1 != v2) return v1 - v2
+                }
+                return ver1.size() - ver2.size()
+            } catch (Exception e) {
+                e.printStackTrace()
+                return 0
+            }
+        }
+    })
+    if (listDir.size() > save_history_max_num) {
+        for (int i = listDir.size() - 11; i > -1; i--) {
+            def delFile = listDir.get(i)
+            deleteDir(delFile, true)
+        }
+    }
+}
+
+def removeModuleAar(variant, String path) {
+    if (variant.name.toLowerCase().contains("release")) {
+        def file = variant.outputs[0].outputFile
+        def fileName = file.name.replace("-release", "")
+//        println(path + fileName)
+        variant.outputs[0].outputFile = new File(path + fileName)
+    }
+}
+
+def runAppRelease(Project project, String startTag, app_variant) {
+    if (!app_variant.versionName.contains('beta')) {
+        def saveDir = file("$history_path/${app_variant.versionName}")
+        app_variant.outputs.each { output ->
+            def newName = "$startTag-${app_variant.flavorName}-${app_variant.versionName}-${app_variant.versionCode}.apk"
+            output.outputFile = new File(saveDir, newName)
+        }
+        if (app_variant.getBuildType().isMinifyEnabled()) {
+            app_variant.assemble.doLast {
+                limitHistory(file(history_path))
+                saveRunProperties(saveDir.path)
+                saveRunConfig(project, "${saveDir.path}/config")
+                app_variant.getProductFlavors().each { flavor ->
+                    def mappingFile = file("${rootDir}/app/build/outputs/mapping/${flavor.name}/release/mapping.txt")
+                    if (mappingFile.exists()) {
+                        try {
+                            copy {
+                                from "${mappingFile}"
+                                into saveDir
+                                rename { String fileName ->
+                                    "mapping-${flavor.name}.txt"
+                                }
+                            }
+                            copy {
+                                from "${history_lib_save}"
+                                into "${saveDir.path}/config"
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace()
+                        }
+                    }
+                }
+            }
+        }
+    }else{
+        app_variant.outputs.each { output ->
+            def newName = "$startTag-${app_variant.flavorName}-${app_variant.versionName}-${app_variant.versionCode}.apk"
+            output.outputFile = new File(output.outputFile.parent, newName)
+        }
+    }
+}
+
+def saveRunProperties(String pathDir) {
+    def parent = file(pathDir)
+    if (!parent.exists() && !parent.isDirectory()) {
+        parent.mkdirs()
+    }
+    def content = '{\n'
+    content = content.concat("\t\"user_name\":\"create by ${System.properties['user.name']}\",\n")
+    rootProject.ext.each { ob ->
+        ob.properties.each {
+            value ->
+                content = content.concat("\t\"${value.toString().replace('=', "\":\"")}\",\n")
+        }
+    }
+    if (content.length() > 2) {
+        content = content.substring(0, content.length() - 2)
+    }
+    content = content.concat('\n}')
+    writeFile("${pathDir}/config/app-编译环境.json", content, false)
+}
+
+def saveRunConfig(Project project, String pathDir) {
+    def parent = file(pathDir)
+    if (!parent.exists() && !parent.isDirectory()) {
+        parent.mkdirs()
+    }
+    def dependencyContent = '{\n'
+    dependencyContent = dependencyContent.concat("\t\"user_name\":\"create by ${System.properties['user.name']}\",\n")
+    dependencyContent = dependencyContent.concat(dependenciesAddJson(project, 'compile'))
+    dependencyContent = dependencyContent.concat(dependenciesAddJson(project, 'provided'))
+
+    def jarList = project.fileTree(dir: 'libs', include: ['*.*'])
+    dependencyContent = dependencyContent.concat("\t\"jar_list\":[\n")
+
+    for (int i = 0; i < jarList.size(); i++) {
+        def file = jarList[i]
+//        println(file)
+        if (i < jarList.size() - 1) dependencyContent = dependencyContent.concat("\t\t\"${file.name}\",\n")
+        else dependencyContent = dependencyContent.concat("\t\t\"${file.name}\"\n")
+
+    }
+    dependencyContent = dependencyContent.concat('\t],\n')
+
+    dependencyContent = dependencyContent.concat("\t\"so_list\":{\n")
+    def jniDir = file("${project.getProjectDir().path}/src/main/jniLibs/")
+    if (jniDir.exists() && jniDir.isDirectory()) {
+        def jniList = jniDir.listFiles()
+        for (int i = 0; i < jniList.size(); i++) {
+            def dir = jniList[i]
+            if (dir.isDirectory() && dir.list().size() > 0) {
+                dependencyContent = dependencyContent.concat("\t\t\"${dir.name}\":[\n")
+                def soList = dir.listFiles()
+                for (int j = 0; j < soList.size(); j++) {
+                    def so = soList[j]
+                    if (j < soList.size() - 1) dependencyContent = dependencyContent.concat("\t\t\t\"${so.name}\",\n")
+                    else dependencyContent = dependencyContent.concat("\t\t\t\"${so.name}\"\n")
+                }
+
+                if (i < jniList.size() - 1) dependencyContent = dependencyContent.concat('\t\t],\n')
+                else dependencyContent = dependencyContent.concat('\t\t]\n')
+            }
+        }
+    }
+    dependencyContent = dependencyContent.concat('\t}\n')
+
+
+
+    dependencyContent = dependencyContent.concat('\n}')
+    writeFile("${pathDir}/${project.name}-依赖库.json", dependencyContent, false)
+}
+
+def dependenciesAddJson(Project project, String name) {
+//    project.getConfigurations().each { value ->
+//        println(project.name +"config = ${value.name}")
+//    }
+    ConfigurationContainer configurations = project.getConfigurations();
+    DomainObjectSet<Dependency> dependencies = configurations.getByName(name).getAllDependencies().withType(Dependency.class)
+    //    for (Dependency dependency : dependencies) {
+//        println(project.name + "dependency == " + dependency.toString())
+//    }
+    def content = "\t\"${name}_list\":[\n"
+    for (int i = 0; i < dependencies.size(); i++) {
+        def dependency = dependencies[i]
+        if (!dependency.name.equalsIgnoreCase('unspecified')) {
+            content = content.concat("\t\t{\n")
+            content = content.concat("\t\t\t\"group\":\"${dependency.group}\",\n")
+            content = content.concat("\t\t\t\"library\":\"${dependency.name}\",\n")
+            content = content.concat("\t\t\t\"version\":\"${dependency.version}\"\n")
+            if (i < dependencies.size() - 1) content = content.concat('\t\t},\n')
+            else content = content.concat('\t\t}\n')
+        }
+    }
+    content = content.concat('\t],\n')
+    return content
+}
+
+
+def readVersion(String path) {
+    def dataList = new HashMap()
+
+    def theInfoFile = file(path)
+
+    if (!theInfoFile.exists()) {
+        writeFile(path, '版本号                          vCode                          责任人', true)
+    } else {
+        theInfoFile.eachLine { line ->
+            if (line.trim()) {
+                def (key, value) = line.split('=').collect { it.trim() }
+                dataList.put(key, value)
+            }
+        }
+    }
+    dataList.each { k, v ->
+        println "$k=$v"
+    }
+    return dataList
+}
+
+def deleteDir(File saveDir, boolean deleteSelf) {
+    if (saveDir.exists() && saveDir.isDirectory()) {
+        def tempList = saveDir.listFiles()
+        tempList.each { f ->
+            if (f.isDirectory()) deleteDir(f, true)
+            else f.delete()
+        }
+        if (deleteSelf)
+            saveDir.deleteDir()
+    }
+}
+
+def writeFile(String path, String content, boolean append) {
+    try {
+        if (!file(path).exists()) {
+            println("$path err message: \nFile does not exist")
+            file(path).createNewFile()
+        }
+        // 打开一个写文件器，构造函数中的第二个参数true表示以追加形式写文件
+        def writer = new FileWriter(path, append);
+        writer.write(content);
+        writer.close();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
