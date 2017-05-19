@@ -92,7 +92,7 @@ def runAppRelease(Project project, String startTag, app_variant) {
                                 }
                             }
                             copy {
-                                from "${getHistoryPath()}/lib"
+                                from "${rootProject.buildDir.path}/lib"
                                 into "${saveDir.path}/config"
                             }
                         } catch (Exception e) {
