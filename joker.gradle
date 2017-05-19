@@ -140,7 +140,7 @@ def saveRunProperties(String pathDir) {
 }
 
 def saveLibRunConfig(Project project) {
-    saveRunConfig(project, "${getHistoryPath()}/lib")
+    saveRunConfig(project, "${rootProject.buildDir}/lib")
 }
 
 def saveRunConfig(Project project, String pathDir) {
