@@ -2,17 +2,38 @@ github收集
 =====================
 集合个人长期收集的库
 ******
-###         17.07.14  Author:joker
+###           Author:joker
 =====================
 
 # 目录
- * [下拉刷新](#下拉刷新)
+ * [下拉刷新](#下拉刷新
+   * SmartRefreshLayout
+   * SlidingLayout
+   * TwinklingRefreshLayout
+   * XRecyclerView
+   * SpringView
+   * MaterialRefreshLayout
+   * CircleRefreshLayout
+   * WaveSwipeRefreshLayout
+   * android-Ultra-Pull-To-Refresh
+   * BeautifulRefreshLayout
  * [List](#List)
+   * [vlayout](#vlayout)
+   * itemtouchhelper-extension
+   * BaseRecyclerViewAdapterHelper
+   * recyclerview-animators
+   * twoway-view
+   * sticky-headers-recyclerview
+   * pinned-section-listview
+   * PullZoomRecyclerView
+   * ListViewAnimations
+   * StickyListHeaders
+   * StickyGridHeaders
  * [ViewPager](#ViewPager)
  * [Image](#Image)
  * [TextView](#TextView)
  * [loading](#loading)
- * [Card 卡片](#Card 卡片)
+ * [Card 卡片](#CardView)
  * [Tab](#Tab)
  * [Menu](#Menu)
  * [Anim](#Anim)
@@ -26,7 +47,7 @@ github收集
  * [数据保存](#数据保存)
  * [网络](#网络)
  * [下载](#下载)
- * [hot fix](#hot fix)
+ * [hot fix](#hotFix)
  * [系统](#系统)
  * [工具](#工具)
  * [kotlin](#kotlin)
@@ -61,7 +82,7 @@ github收集
   a custom pull-to-refresh layout which contains a interesting animation<br>
   ![ci](https://github.com/tuesda/CircleRefreshLayout/raw/master/gif/circlerefresh.gif)
 
-  8. [WaveSwipeRefreshLayout](https://github.com/recruit-lifestyle/WaveSwipeRefreshLayout)
+  8. [WaveSwipeRefreshLayout](https://github.com/recruit-lifestyle/WaveSwipeRefreshLayout)<br>
   ![refresh](https://github.com/recruit-lifestyle/WaveSwipeRefreshLayout/raw/master/sc/animation.gif)
 
   9. [android-Ultra-Pull-To-Refresh](https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh)
@@ -364,7 +385,7 @@ github收集
   Nice loading animations for Android<br>
   ![load](https://github.com/81813780/AVLoadingIndicatorView/raw/master/screenshots/avi.gif)
 
-## Card 卡片
+## CardView
   1. [ChromeLikeTabSwitcher](https://github.com/michael-rapp/ChromeLikeTabSwitcher)<br><br>
   chrome卡片切换
   Provides a tab switcher similar to the one, which is used in Google Chrome on Android<br>
@@ -771,7 +792,7 @@ github收集
   Android 文件下载引擎，稳定、高效、灵活、简单易用<br>
   <br>![down](https://raw.githubusercontent.com/lingochamp/FileDownloader/master/art/serial_tasks_demo.gif)<br>
 
-## hot fix
+## hotFix
   1. [Robust](https://github.com/Meituan-Dianping/Robust/blob/master/README-zh.md)<br> 美团出品<br>
   新一代热更新系统Robust，对Android版本无差别兼容。无需发版就可以做到随时修改线上bug，快速对重大线上问题作出反应，补丁修补成功率高达99.9%。
 
