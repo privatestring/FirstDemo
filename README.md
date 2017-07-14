@@ -17,7 +17,7 @@ github收集
    * WaveSwipeRefreshLayout
    * android-Ultra-Pull-To-Refresh
    * BeautifulRefreshLayout
- * [List](#List)
+ * [列表List](#列表List)
    * [vlayout](#vlayout)
    * itemtouchhelper-extension
    * BaseRecyclerViewAdapterHelper
@@ -91,7 +91,7 @@ github收集
   10. [BeautifulRefreshLayout](https://github.com/android-cjj/BeautifulRefreshLayout)
   下拉刷新集合
 
-## List
+## 列表List
   1. [vlayout](https://github.com/alibaba/vlayout)<br>
   通过定制化的LayoutManager，接管整个RecyclerView的布局逻辑；LayoutManager管理了一系列LayoutHelper，LayoutHelper负责具体布局逻辑实现的地方；每一个LayoutHelper负责页面某一个范围内的组件布局；不同的LayoutHelper可以做不同的布局逻辑，因此可以在一个RecyclerView页面里提供异构的布局结构，这就能比系统自带的LinearLayoutManager、GridLayoutManager等提供更加丰富的能力。同时支持扩展LayoutHelper来提供更多的布局能力。<br>
   <br>![img](https://camo.githubusercontent.com/2b947a15f5502af5a4639a5927d68052ccfb54a3/687474703a2f2f696d67332e746263646e2e636e2f4c312f3436312f312f31623962666234323030393034376637356365653038616537343135303564653263373461633061)<br>
