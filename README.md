@@ -6,7 +6,7 @@ github收集
 =====================
 
 # 目录
- * [下拉刷新](#下拉刷新)
+## [下拉刷新](#下拉刷新)
    * SmartRefreshLayout
    * SlidingLayout
    * TwinklingRefreshLayout
@@ -17,7 +17,8 @@ github收集
    * WaveSwipeRefreshLayout
    * android-Ultra-Pull-To-Refresh
    * BeautifulRefreshLayout
- * [list](#list)
+   
+## [list](#list)
    * vlayout
    * itemtouchhelper-extension
    * BaseRecyclerViewAdapterHelper
@@ -29,7 +30,8 @@ github收集
    * ListViewAnimations
    * StickyListHeaders
    * StickyGridHeaders
- * [viewpager](#viewpager)
+   
+## [viewpager](#viewpager)
   * UltraViewPager 
   * android-page-transition
   * ZoomHeader
@@ -40,7 +42,8 @@ github收集
   * MaterialViewPager
   * material-scrolling
   * AndroidImageSlider
- * [image](#image)
+  
+## [image](#image)
   * DragPhotoView
   * transferee
   * Matisse
@@ -78,7 +81,8 @@ github收集
   * FingerTransparentView
   * android-crop
   * SimpleCropView
- * [textView](#textView)
+  
+## [textView](#textView)
   * CompoundIconTextView
   * MarkdownView
   * SuperTextView
@@ -92,7 +96,8 @@ github收集
   * shimmer-android
   * AutosizeEditText
   * Android-TextView-LinkBuilder
- * [loading](#loading)
+  
+## [loading](#loading)
   * Grav
   * spruce-android
   * NumberProgressBar
@@ -100,7 +105,8 @@ github收集
   * dampView-springingView
   * materialish-progress
   * AVLoadingIndicatorView
- * [Card 卡片](#cardview)
+  
+## [Card 卡片](#cardview)
   * ChromeLikeTabSwitcher
   * Android-InfiniteCards
   * ViewPagerCards
@@ -113,7 +119,8 @@ github收集
   * SwipeCardView
   * android-card-slide-panel
   * Swipe-Deck
- * [Menu](#menu)
+  
+## [Menu](#menu)
   * SwipeDelMenuLayout
   * hover
   * SwipeRecyclerView
@@ -121,12 +128,14 @@ github收集
   * BoomMenu
   * AndroidChangeSkin
   * SwipeMenuListView
- * [Anim](#anim)
+  
+## [Anim](#anim)
   * lottie-android
   * AndroidSwipeLayout
   * AndroidViewAnimations
   * ToggleDrawable
- * [Tab](#tab)
+  
+## [Tab](#tab)
   * SpaceTabLayout
   * Space-Navigation-View
   * NavigationTabStrip
@@ -135,10 +144,20 @@ github收集
   * SmartTabLayout
   * BottomBar
   * FlycoTabLayout
- * [表格](#表格)
   
- * [Dialog](#dialog)
- * [CustomView](#customview)
+## [表格](#表格)
+  * StepView
+  * ScrollablePanel
+  * MPAndroidChart
+  
+## [Dialog](#dialog)
+  * android-adDialog
+  * sweet-alert-dialog
+  * MaterialDialog
+  * FlycoDialog_Master
+  * NiftyDialogEffects
+  
+## [CustomView](#customview)
   * SlidingRootNav
   * PatternLockView
   * SlideUp-Android
@@ -167,13 +186,16 @@ github收集
   * GridPasswordView
   * AndroidTagGroup
   * DragExpandGrid
- * [聊天UI](#聊天)
+  
+## [聊天UI](#聊天)
   * aurora-imui
   * MaterialChipsInput
   * emojicon
- * [Behavior](#behavior)
+  
+## [Behavior](#behavior)
   * EasyBehavior
- * [Intent跳转](#跳转)
+  
+## [Intent跳转](#跳转)
   * ARouter
   * Android-DragDismissActivity
   * TransitionHelper
@@ -184,13 +206,16 @@ github收集
   * slidr
   * Material-Animations
   * ParallaxSwipeBack
- * [内存泄漏](#内存泄漏)
+  
+## [内存泄漏](#内存泄漏)
   * BlockCanaryEx
   * leakcanary
- * [数据保存](#数据保存)
+  
+## [数据保存](#数据保存)
   * greenDAO
   * DiskLruCache
- * [网络](#网络)
+  
+## [网络](#网络)
   * LDNetDiagnoService_Android
   * mars
   * picasso2-okhttp3
@@ -203,13 +228,16 @@ github收集
   * android-async-http
   * OkHttp
   * retrofit
- * [下载](#下载)
+  
+## [下载](#下载)
   * Aria
   * RxDownload
- * [hot fix](#hotfix)
+  
+## [hot fix](#hotfix)
   * Robust
   * Tinker
- * [系统](#系统)
+  
+## [系统](#系统)
   * CameraKit-Android
   * JumpPermissionManagement
   * shortbread
@@ -227,7 +255,8 @@ github收集
   * easypermissions
   * RxGalleryFinal
   * AndroidMp3Recorder
- * [工具](#工具)
+  
+## [工具](#工具)
   * FingerprintIdentify
   * AndroidUtils
   * android-utils
@@ -265,7 +294,8 @@ github收集
   * colorful
   * jackson-databind
   * Telecine
- * [kotlin](#kotlin)
+  
+## [kotlin](#kotlin)
   * from-java-to-kotlin
   * kotlinpoet
   * kotlin-frontend-plugin
