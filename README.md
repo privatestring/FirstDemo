@@ -6,7 +6,7 @@ github收集
 =====================
 
 # 目录
- * [下拉刷新](#下拉刷新
+ * [下拉刷新](#下拉刷新)
    * SmartRefreshLayout
    * SlidingLayout
    * TwinklingRefreshLayout
@@ -85,7 +85,7 @@ github收集
   8. [WaveSwipeRefreshLayout](https://github.com/recruit-lifestyle/WaveSwipeRefreshLayout)<br>
   ![refresh](https://github.com/recruit-lifestyle/WaveSwipeRefreshLayout/raw/master/sc/animation.gif)
 
-  9. [android-Ultra-Pull-To-Refresh](https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh)
+  9. [android-Ultra-Pull-To-Refresh](https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh)<br>
   ![refresh](https://camo.githubusercontent.com/588a2ef2cdcfb6c71e88437df486226dd15605b3/687474703a2f2f737261696e2d6769746875622e71696e6975646e2e636f6d2f756c7472612d7074722f73746f72652d686f7573652d737472696e672d61727261792e676966)
 
   10. [BeautifulRefreshLayout](https://github.com/android-cjj/BeautifulRefreshLayout)
