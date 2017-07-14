@@ -17,7 +17,7 @@ github收集
    * WaveSwipeRefreshLayout
    * android-Ultra-Pull-To-Refresh
    * BeautifulRefreshLayout
- * [列表List](#列表List)
+ * [list](#list)
    * [vlayout](#vlayout)
    * itemtouchhelper-extension
    * BaseRecyclerViewAdapterHelper
@@ -29,8 +29,8 @@ github收集
    * ListViewAnimations
    * StickyListHeaders
    * StickyGridHeaders
- * [ViewPager](#ViewPager)
- * [Image](#Image)
+ * [viewpager](#viewpager)
+ * [image](#image)
  * [TextView](#TextView)
  * [loading](#loading)
  * [Card 卡片](#CardView)
@@ -91,7 +91,7 @@ github收集
   10. [BeautifulRefreshLayout](https://github.com/android-cjj/BeautifulRefreshLayout)
   下拉刷新集合
 
-## 列表List
+## list
   1. [vlayout](https://github.com/alibaba/vlayout)<br>
   通过定制化的LayoutManager，接管整个RecyclerView的布局逻辑；LayoutManager管理了一系列LayoutHelper，LayoutHelper负责具体布局逻辑实现的地方；每一个LayoutHelper负责页面某一个范围内的组件布局；不同的LayoutHelper可以做不同的布局逻辑，因此可以在一个RecyclerView页面里提供异构的布局结构，这就能比系统自带的LinearLayoutManager、GridLayoutManager等提供更加丰富的能力。同时支持扩展LayoutHelper来提供更多的布局能力。<br>
   <br>![img](https://camo.githubusercontent.com/2b947a15f5502af5a4639a5927d68052ccfb54a3/687474703a2f2f696d67332e746263646e2e636e2f4c312f3436312f312f31623962666234323030393034376637356365653038616537343135303564653263373461633061)<br>
@@ -127,7 +127,7 @@ github收集
   ![stick](https://camo.githubusercontent.com/90b57e9383704c400706545225d439e057c6fcc0/687474703a2f2f342e62702e626c6f6773706f742e636f6d2f2d535f4262685758367754592f55517057306377554745492f41414141414141414776552f7a7a4a586a2d50635662592f73313630302f73637265656e2d6c616e6473636170652d736d616c6c65722e706e67)
 
 
-## ViewPager
+## viewpager
   1. [UltraViewPager](https://github.com/alibaba/UltraViewPager)<br>
   UltraViewPager是一个封装多种特性的ViewPager，主要是为多页面切换场景提供统一解决方案。<br>
   <br>![img](https://raw.githubusercontent.com/alibaba/UltraViewPager/master/pics/pics2.gif)<br>
@@ -168,7 +168,7 @@ github收集
   An amazing and convenient Android image slider.<br>
   ![daimajia](https://camo.githubusercontent.com/f64413139bbaa918131384d3597c33e39333aa7f/687474703a2f2f7777332e73696e61696d672e636e2f6d773639302f36313064633033346a773165677a6f7236366f6a64673230393530666b6e70652e676966)
 
-## Image
+## image
   1. [DragPhotoView](https://github.com/githubwing/DragPhotoView)<br><br>
   高仿微信可拖拽返回PhotoView<br>
   <br>![img](https://github.com/githubwing/DragPhotoView/raw/master/img/img.gif)<br>
