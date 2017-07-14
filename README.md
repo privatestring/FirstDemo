@@ -18,7 +18,7 @@ github收集
    * android-Ultra-Pull-To-Refresh
    * BeautifulRefreshLayout
  * [list](#list)
-   * [vlayout](#vlayout)
+   * vlayout
    * itemtouchhelper-extension
    * BaseRecyclerViewAdapterHelper
    * recyclerview-animators
@@ -31,23 +31,23 @@ github收集
    * StickyGridHeaders
  * [viewpager](#viewpager)
  * [image](#image)
- * [TextView](#TextView)
+ * [textView](#textView)
  * [loading](#loading)
- * [Card 卡片](#CardView)
- * [Tab](#Tab)
- * [Menu](#Menu)
- * [Anim](#Anim)
+ * [Card 卡片](#cardview)
+ * [Tab](#tab)
+ * [Menu](#menu)
+ * [Anim](#anim)
  * [表格](#表格)
- * [Dialog](#Dialog)
- * [CustomView](#CustomView)
- * [聊天UI](#聊天UI)
- * [Behavior](#Behavior)
- * [Intent跳转](#Intent跳转)
+ * [Dialog](#dialog)
+ * [CustomView](#customview)
+ * [聊天UI](#聊天)
+ * [Behavior](#behavior)
+ * [Intent跳转](#跳转)
  * [内存泄漏](#内存泄漏)
  * [数据保存](#数据保存)
  * [网络](#网络)
  * [下载](#下载)
- * [hot fix](#hotFix)
+ * [hot fix](#hotfix)
  * [系统](#系统)
  * [工具](#工具)
  * [kotlin](#kotlin)
@@ -305,7 +305,7 @@ github收集
   A simple image cropping library for Android.<br>
   ![crop](https://camo.githubusercontent.com/1d725ebf4682711e354f01d20917744a25308f15/68747470733a2f2f7261772e6769746875622e636f6d2f77696b692f4973736569416f6b692f53696d706c6543726f70566965772f696d616765732f312e312e302f64656d6f5f726f746174696f6e2e676966)
 
-## TextView
+## textview
   1. [CompoundIconTextView](https://github.com/AAkira/CompoundIconTextView)<br> <br>
   富文本 An android library that is able to set a vector drawable at text view pre-Lollipop.<br>
   <br>![img](https://github.com/AAkira/CompoundIconTextView/raw/master/arts/preview.jpg)<br>
@@ -385,7 +385,7 @@ github收集
   Nice loading animations for Android<br>
   ![load](https://github.com/81813780/AVLoadingIndicatorView/raw/master/screenshots/avi.gif)
 
-## CardView
+## cardview
   1. [ChromeLikeTabSwitcher](https://github.com/michael-rapp/ChromeLikeTabSwitcher)<br><br>
   chrome卡片切换
   Provides a tab switcher similar to the one, which is used in Google Chrome on Android<br>
@@ -425,7 +425,7 @@ github收集
   10. [Swipe-Deck](https://github.com/aaronbond/Swipe-Deck)<br>
   <br>![swipe](https://camo.githubusercontent.com/c52260e0df9446441c7b88cf31ac1d4c26363eac/68747470733a2f2f6661742e6766796361742e636f6d2f5061727469616c4269747465724865726d6974637261622e676966)<br>
 
-## Menu
+## menu
   1. [SwipeDelMenuLayout](https://github.com/mcxtzhang/SwipeDelMenuLayout)<br><Br>
   史上最简单侧滑菜单，0耦合，支持任意ViewGroup。一步集成侧滑(删除)菜单，高仿QQ、IOS<br>
   <br>![menu](https://raw.githubusercontent.com/mcxtzhang/SwipeDelMenuLayout/master/gif/LinearLayoutManager1.gif)<br>
@@ -466,7 +466,7 @@ github收集
   3. [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)<br>
   非常强大
 
-## Dialog
+## dialog
    1. [android-adDialog](https://github.com/yipianfengye/android-adDialog)<br>
    一个简单，强大的广告活动弹窗控件,<br>
    <br>![img](https://raw.githubusercontent.com/yipianfengye/android-adDialog/master/images/ezgif.com-video-to-gif1.gif)<br>
@@ -487,7 +487,7 @@ github收集
    <br>![img](https://camo.githubusercontent.com/456687ac516bb07f1076928d635bfddf6b90d5ec/687474703a2f2f696d67302e70682e3132362e6e65742f69433436653162586b55316631724966555a6f3939773d3d2f363539373632303632313938343031393430382e676966)
 
 
-## Anim
+## anim
    1. [lottie-android](https://github.com/airbnb/lottie-android)<br>
    Lottie is a mobile library for Android and iOS that parses Adobe After Effects animations exported as json with Bodymovin and renders them natively on mobile!<br>
    <br>![anim](https://raw.githubusercontent.com/airbnb/lottie-android/master/gifs/Example1.gif)<br>
@@ -503,7 +503,7 @@ github收集
    4. [ToggleDrawable](https://github.com/renaudcerrato/ToggleDrawable)<br>
    <br>![toggle](https://github.com/renaudcerrato/ToggleDrawable/raw/master/artworks/toggle.gif)<br>
 
-## Tab
+## tab
   1. [SpaceTabLayout](https://github.com/thelong1EU/SpaceTabLayout)<br>
   This is a awesome TabLayout for Android with a central Floating Action Button :D<br>
   <br>![tab](https://raw.githubusercontent.com/thelong1EU/SpaceTabLayout/master/readmeSource/3.gif)<br>
@@ -534,7 +534,7 @@ github收集
   一个Android TabLayout库,目前有3个TabLayout<br>
   ![tab](https://github.com/H07000223/FlycoTabLayout/raw/master/preview_1.gif)
 
-## CustomView
+## customview
   1. [SlidingRootNav](https://github.com/yarolegovich/SlidingRootNav)<br><br>
   The library is a DrawerLayout-like ViewGroup, where a "drawer" is hidden under the content view, which can be shifted to make the drawer visible. It doesn't provide you with a drawer builder.<br>
   <<br>![img](https://raw.githubusercontent.com/yarolegovich/SlidingRootNav/master/art/sample.gif)<br>
@@ -649,7 +649,7 @@ github收集
   可展开，可拖动，可排序，可删除，固定更多的GridView<br>
   ![grid](https://github.com/wedcel/DragExpandGrid/raw/master/device-2015-08-26-180601.gif)
 
-## 聊天UI
+## 聊天
   1. [Aurora IMUI](https://github.com/jpush/aurora-imui/blob/master/README_zh.md)<br><br>
   Aurora IMUI 是个通用的即时通讯（IM）UI 库，不特定于任何 IM SDK。
   本 UI 库提供了消息列表、输入视图等常用组件，支持常见的消息类型：文字、图片、语音、视频等。默认包含多套界面风格，也能根据自己的需要自定义。
@@ -663,7 +663,7 @@ github收集
   3. [emojicon](https://github.com/rockerhieu/emojicon)<br>
   A library to show emoji in TextView, EditText (like WhatsApp) for Android
 
-## Behavior
+## behavior
   1. [EasyBehavior](https://github.com/JmStefanAndroid/EasyBehavior)<br><br>
   一个可以上拉下滑的Ui效果
    #### 这个Behavior用途主要有以下3点：
@@ -672,7 +672,7 @@ github收集
    * Toolbar的背景Alpha的改变<br>
    <br>![img](https://github.com/JmStefanAndroid/EasyBehavior/raw/master/gif/EasyBehavior.gif)<br>
 
-## Intent跳转
+## 跳转
   1. [ARouter](https://github.com/alibaba/ARouter)<br> 隐式意图
    *  支持直接解析标准URL进行跳转，并自动注入参数到目标页面中
    * 支持多模块工程使用
@@ -792,7 +792,7 @@ github收集
   Android 文件下载引擎，稳定、高效、灵活、简单易用<br>
   <br>![down](https://raw.githubusercontent.com/lingochamp/FileDownloader/master/art/serial_tasks_demo.gif)<br>
 
-## hotFix
+## hotfix
   1. [Robust](https://github.com/Meituan-Dianping/Robust/blob/master/README-zh.md)<br> 美团出品<br>
   新一代热更新系统Robust，对Android版本无差别兼容。无需发版就可以做到随时修改线上bug，快速对重大线上问题作出反应，补丁修补成功率高达99.9%。
 
