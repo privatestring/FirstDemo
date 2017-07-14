@@ -302,7 +302,7 @@ github收集
   * kotlin-dsl
 
 
-## <span id = "refresh">下拉刷新</span> [目录](#目录)
+<h2 id="refresh">下拉刷新</h2> [目录](#目录)
   1. [SmartRefreshLayout](https://github.com/scwang90/SmartRefreshLayout)<br>
       Android智能下拉刷新框架，支持越界回弹，集成了几十种炫酷的Header和 Footer。 RefreshLayout，OverScroll<br>
       <br>![img](https://github.com/scwang90/SmartRefreshLayout/raw/master/art/gif_practive_weibo.gif)<br>
