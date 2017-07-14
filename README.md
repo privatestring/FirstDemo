@@ -302,7 +302,8 @@ github收集
   * kotlin-dsl
 
 
-<h2 id="refresh">下拉刷新</h2> [目录](#目录)
+<h2 id="refresh">下拉刷新</h2> 
+  ## [回目录](#目录)
   1. [SmartRefreshLayout](https://github.com/scwang90/SmartRefreshLayout)<br>
       Android智能下拉刷新框架，支持越界回弹，集成了几十种炫酷的Header和 Footer。 RefreshLayout，OverScroll<br>
       <br>![img](https://github.com/scwang90/SmartRefreshLayout/raw/master/art/gif_practive_weibo.gif)<br>
@@ -340,7 +341,8 @@ github收集
   10. [BeautifulRefreshLayout](https://github.com/android-cjj/BeautifulRefreshLayout)
   下拉刷新集合
 
-## list  [目录](#目录)
+<h2 id="list">list</h2> 
+  ## [回目录](#目录)
   1. [vlayout](https://github.com/alibaba/vlayout)<br>
   通过定制化的LayoutManager，接管整个RecyclerView的布局逻辑；LayoutManager管理了一系列LayoutHelper，LayoutHelper负责具体布局逻辑实现的地方；每一个LayoutHelper负责页面某一个范围内的组件布局；不同的LayoutHelper可以做不同的布局逻辑，因此可以在一个RecyclerView页面里提供异构的布局结构，这就能比系统自带的LinearLayoutManager、GridLayoutManager等提供更加丰富的能力。同时支持扩展LayoutHelper来提供更多的布局能力。<br>
   <br>![img](https://camo.githubusercontent.com/2b947a15f5502af5a4639a5927d68052ccfb54a3/687474703a2f2f696d67332e746263646e2e636e2f4c312f3436312f312f31623962666234323030393034376637356365653038616537343135303564653263373461633061)<br>
@@ -376,7 +378,8 @@ github收集
   ![stick](https://camo.githubusercontent.com/90b57e9383704c400706545225d439e057c6fcc0/687474703a2f2f342e62702e626c6f6773706f742e636f6d2f2d535f4262685758367754592f55517057306377554745492f41414141414141414776552f7a7a4a586a2d50635662592f73313630302f73637265656e2d6c616e6473636170652d736d616c6c65722e706e67)
 
 
-## viewpager  [目录](#目录)
+<h2 id="viewpager">viewpager</h2>  
+ ## [回目录](#目录)
   1. [UltraViewPager](https://github.com/alibaba/UltraViewPager)<br>
   UltraViewPager是一个封装多种特性的ViewPager，主要是为多页面切换场景提供统一解决方案。<br>
   <br>![img](https://raw.githubusercontent.com/alibaba/UltraViewPager/master/pics/pics2.gif)<br>
@@ -417,7 +420,8 @@ github收集
   An amazing and convenient Android image slider.<br>
   ![daimajia](https://camo.githubusercontent.com/f64413139bbaa918131384d3597c33e39333aa7f/687474703a2f2f7777332e73696e61696d672e636e2f6d773639302f36313064633033346a773165677a6f7236366f6a64673230393530666b6e70652e676966)
 
-## image  [目录](#目录)
+<h2 id="image">image</h2> 
+ ## [回目录](#目录)
   1. [DragPhotoView](https://github.com/githubwing/DragPhotoView)<br><br>
   高仿微信可拖拽返回PhotoView<br>
   <br>![img](https://github.com/githubwing/DragPhotoView/raw/master/img/img.gif)<br>
@@ -554,7 +558,8 @@ github收集
   A simple image cropping library for Android.<br>
   ![crop](https://camo.githubusercontent.com/1d725ebf4682711e354f01d20917744a25308f15/68747470733a2f2f7261772e6769746875622e636f6d2f77696b692f4973736569416f6b692f53696d706c6543726f70566965772f696d616765732f312e312e302f64656d6f5f726f746174696f6e2e676966)
 
-## textview  [目录](#目录)
+<h2 id="textview">textview</h2> 
+ ## [回目录](#目录)
   1. [CompoundIconTextView](https://github.com/AAkira/CompoundIconTextView)<br> <br>
   富文本 An android library that is able to set a vector drawable at text view pre-Lollipop.<br>
   <br>![img](https://github.com/AAkira/CompoundIconTextView/raw/master/arts/preview.jpg)<br>
@@ -607,7 +612,8 @@ github收集
   Insanely easy way to define clickable links within a TextView.<br>
   ![link](https://github.com/klinker24/Android-TextView-LinkBuilder/raw/master/preview.png)
 
-## loading  [目录](#目录)
+<h2 id="loading">loading</h2> 
+## [回目录](#目录)
   1. [Grav](https://github.com/glomadrian/Grav)<br>
     The library is composed of generators, each generator takes care of one thing. Composing different generators you can obtain different results.<br>
     <br>![img](https://raw.githubusercontent.com/glomadrian/Grav/master/art/grav.gif)<br>
@@ -634,7 +640,8 @@ github收集
   Nice loading animations for Android<br>
   ![load](https://github.com/81813780/AVLoadingIndicatorView/raw/master/screenshots/avi.gif)
 
-## cardview  [目录](#目录)
+<h2 id="cardview">cardview</h2>
+## [回目录](#目录)
   1. [ChromeLikeTabSwitcher](https://github.com/michael-rapp/ChromeLikeTabSwitcher)<br><br>
   chrome卡片切换
   Provides a tab switcher similar to the one, which is used in Google Chrome on Android<br>
@@ -674,7 +681,8 @@ github收集
   10. [Swipe-Deck](https://github.com/aaronbond/Swipe-Deck)<br>
   <br>![swipe](https://camo.githubusercontent.com/c52260e0df9446441c7b88cf31ac1d4c26363eac/68747470733a2f2f6661742e6766796361742e636f6d2f5061727469616c4269747465724865726d6974637261622e676966)<br>
 
-## menu  [目录](#目录)
+<h2 id="menu">Menu</h2> 
+## [回目录](#目录)
   1. [SwipeDelMenuLayout](https://github.com/mcxtzhang/SwipeDelMenuLayout)<br><Br>
   史上最简单侧滑菜单，0耦合，支持任意ViewGroup。一步集成侧滑(删除)菜单，高仿QQ、IOS<br>
   <br>![menu](https://raw.githubusercontent.com/mcxtzhang/SwipeDelMenuLayout/master/gif/LinearLayoutManager1.gif)<br>
@@ -703,7 +711,8 @@ github收集
   A swipe menu for ListView.<br>
   ![menu](https://raw.githubusercontent.com/baoyongzhang/SwipeMenuListView/master/demo.gif)
 
-## 表格  [目录](#目录)
+<h2 id="表格">表格</h2> 
+## [回目录](#目录)
   1. [StepView](https://github.com/baoyachi/StepView)<br><br>
   Step by step，just use HorizontalStepView，VerticalStepView. step indicator，flow indicator，timeline，order process，express status<br>
   <br>![step](https://github.com/baoyachi/StepView/raw/master/art/splash.png)<br>
@@ -715,7 +724,8 @@ github收集
   3. [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)<br>
   非常强大
 
-## dialog  [目录](#目录)
+<h2 id="dialog">dialog</h2> 
+## [回目录](#目录)
    1. [android-adDialog](https://github.com/yipianfengye/android-adDialog)<br>
    一个简单，强大的广告活动弹窗控件,<br>
    <br>![img](https://raw.githubusercontent.com/yipianfengye/android-adDialog/master/images/ezgif.com-video-to-gif1.gif)<br>
@@ -736,7 +746,8 @@ github收集
    <br>![img](https://camo.githubusercontent.com/456687ac516bb07f1076928d635bfddf6b90d5ec/687474703a2f2f696d67302e70682e3132362e6e65742f69433436653162586b55316631724966555a6f3939773d3d2f363539373632303632313938343031393430382e676966)
 
 
-## anim  [目录](#目录)
+<h2 id="anim">anim</h2> 
+## [回目录](#目录)
    1. [lottie-android](https://github.com/airbnb/lottie-android)<br>
    Lottie is a mobile library for Android and iOS that parses Adobe After Effects animations exported as json with Bodymovin and renders them natively on mobile!<br>
    <br>![anim](https://raw.githubusercontent.com/airbnb/lottie-android/master/gifs/Example1.gif)<br>
@@ -752,7 +763,8 @@ github收集
    4. [ToggleDrawable](https://github.com/renaudcerrato/ToggleDrawable)<br>
    <br>![toggle](https://github.com/renaudcerrato/ToggleDrawable/raw/master/artworks/toggle.gif)<br>
 
-## tab  [目录](#目录)
+<h2 id="tab">tab</h2> 
+## [回目录](#目录)
   1. [SpaceTabLayout](https://github.com/thelong1EU/SpaceTabLayout)<br>
   This is a awesome TabLayout for Android with a central Floating Action Button :D<br>
   <br>![tab](https://raw.githubusercontent.com/thelong1EU/SpaceTabLayout/master/readmeSource/3.gif)<br>
@@ -783,7 +795,8 @@ github收集
   一个Android TabLayout库,目前有3个TabLayout<br>
   ![tab](https://github.com/H07000223/FlycoTabLayout/raw/master/preview_1.gif)
 
-## customview  [目录](#目录)
+<h2 id="customview">customview</h2> 
+## [回目录](#目录)
   1. [SlidingRootNav](https://github.com/yarolegovich/SlidingRootNav)<br><br>
   The library is a DrawerLayout-like ViewGroup, where a "drawer" is hidden under the content view, which can be shifted to make the drawer visible. It doesn't provide you with a drawer builder.<br>
   <<br>![img](https://raw.githubusercontent.com/yarolegovich/SlidingRootNav/master/art/sample.gif)<br>
@@ -898,7 +911,8 @@ github收集
   可展开，可拖动，可排序，可删除，固定更多的GridView<br>
   ![grid](https://github.com/wedcel/DragExpandGrid/raw/master/device-2015-08-26-180601.gif)
 
-## 聊天  [目录](#目录)
+<h2 id="聊天">聊天</h2> 
+## [回目录](#目录)
   1. [Aurora IMUI](https://github.com/jpush/aurora-imui/blob/master/README_zh.md)<br><br>
   Aurora IMUI 是个通用的即时通讯（IM）UI 库，不特定于任何 IM SDK。
   本 UI 库提供了消息列表、输入视图等常用组件，支持常见的消息类型：文字、图片、语音、视频等。默认包含多套界面风格，也能根据自己的需要自定义。
@@ -912,7 +926,8 @@ github收集
   3. [emojicon](https://github.com/rockerhieu/emojicon)<br>
   A library to show emoji in TextView, EditText (like WhatsApp) for Android
 
-## behavior  [目录](#目录)
+<h2 id="behavior">behavior</h2> 
+## [回目录](#目录)
   1. [EasyBehavior](https://github.com/JmStefanAndroid/EasyBehavior)<br><br>
   一个可以上拉下滑的Ui效果
    #### 这个Behavior用途主要有以下3点：
@@ -921,7 +936,8 @@ github收集
    * Toolbar的背景Alpha的改变<br>
    <br>![img](https://github.com/JmStefanAndroid/EasyBehavior/raw/master/gif/EasyBehavior.gif)<br>
 
-## 跳转  [目录](#目录)
+<h2 id="跳转">跳转</h2> 
+## [回目录](#目录)
   1. [ARouter](https://github.com/alibaba/ARouter)<br> 隐式意图
    *  支持直接解析标准URL进行跳转，并自动注入参数到目标页面中
    * 支持多模块工程使用
@@ -972,7 +988,8 @@ github收集
   带视觉差的侧滑返回，类似于新版微信和lofter的侧滑返回效果。核心代码小于50行
   ![back](https://github.com/bushijie/ParallaxSwipeBack/raw/master/show.gif)
 
-## 内存泄漏  [目录](#目录)
+<h2 id="内存泄漏">内存泄漏</h2> 
+## [回目录](#目录)
   1. [BlockCanaryEx](https://github.com/seiginonakama/BlockCanaryEx/blob/master/README_ZH.md)<br> <br>
   记录主线程中执行的所有方法和它们的执行时间，当app卡顿时，将所有耗时方法直接展示给开发者，节省开发者定位卡顿问题的时间。 此项目基于 BlockCanary。<br>
   <br>![img](https://github.com/seiginonakama/BlockCanaryEx/raw/master/sample_gc.jpeg)<br>
@@ -980,14 +997,16 @@ github收集
   2. [leakcanary](https://github.com/square/leakcanary)<br>
   A memory leak detection library for Android and Java.
 
-## 数据保存  [目录](#目录)
+<h2 id="数据保存">数据保存</h2> 
+## [回目录](#目录)
   1. [greenDAO](https://github.com/greenrobot/greenDAO)<br>
   greenDAO is a light & fast ORM solution for Android that maps objects to SQLite databases.
 
   2. [DiskLruCache](https://github.com/JakeWharton/DiskLruCache)<br>
   Java implementation of a Disk-based LRU cache which specifically targets Android compatibility
 
-## 网络  [目录](#目录)
+<h2 id="网络">网络</h2> 
+## [回目录](#目录)
   1. [LDNetDiagnoService_Android](https://github.com/Lede-Inc/LDNetDiagnoService_Android)<br><br>
     * 调用网络诊断服务，监控日志输出；
     * 诊断结束之后，返回日志文本;
@@ -1027,8 +1046,8 @@ github收集
   12. [okhttp](https://github.com/square/okhttp)
   An HTTP+HTTP/2 client for Android and Java applications
 
-
-## 下载  [目录](#目录)
+<h2 id="下载">下载</h2> 
+## [回目录](#目录)
   1. [Aria](https://github.com/AriaLyy/Aria)<br><br>
   Aria项目源于15年工作中遇到的一个文件下载管理的需求，当时被下载折磨的痛不欲生，从那时起便萌生了编写一个简单易用，稳当高效的下载框架，aria经历了1.0到3.0的开发，算是越来越接近当初所制定的目标了。<br>
   <br>![img](https://github.com/AriaLyy/Aria/raw/master/img/download_img.gif)<br>
@@ -1041,7 +1060,9 @@ github收集
   Android 文件下载引擎，稳定、高效、灵活、简单易用<br>
   <br>![down](https://raw.githubusercontent.com/lingochamp/FileDownloader/master/art/serial_tasks_demo.gif)<br>
 
-## hotfix  [目录](#目录)
+
+<h2 id="hotfix">hotfix</h2> 
+## [回目录](#目录)
   1. [Robust](https://github.com/Meituan-Dianping/Robust/blob/master/README-zh.md)<br> 美团出品<br>
   新一代热更新系统Robust，对Android版本无差别兼容。无需发版就可以做到随时修改线上bug，快速对重大线上问题作出反应，补丁修补成功率高达99.9%。
 
@@ -1050,7 +1071,7 @@ github收集
   <br>![hot](https://raw.githubusercontent.com/Tencent/tinker/master/assets/tinker.png)<br>
 
 
-## 系统  [目录](#目录)
+## 系统  ## [回目录](#目录)
   1. [CameraKit-Android](https://github.com/gogopop/CameraKit-Android)<br><br>
   One of the hardest Android APIs made into a high level and easy to use library that solves all of your problems.<br>
   <br>![img](https://raw.githubusercontent.com/gogopop/CameraKit-Android/master/.repo/demo2.png)<br>
@@ -1112,7 +1133,7 @@ github收集
   19. [AndroidMP3Recorder](https://github.com/GavinCT/AndroidMP3Recorder)
   为Android提供MP3录音功能
 
-## 工具  [目录](#目录)
+## 工具  ## [回目录](#目录)
   1. [FingerprintIdentify](https://github.com/uccmawei/FingerprintIdentify/blob/master/other/README_ZH.md)<br>
   这是一个可拓展的Android指纹识别API兼容库
 
